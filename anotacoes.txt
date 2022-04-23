@@ -1,0 +1,14 @@
+npm install @shopify/draggable --save
+
+em webpack.mix.js:
+    mix.copy('node_modules/@shopfy/draggable/lib/draggable.bundle.js', 'public/js/draggable.bundle.js');
+
+na view:
+    <script src="{{ asset('js/draggable.bundle.js') }}"></script>
+    <script>
+        const draggable = new Draggable.Draggable(document.querySelectorAll('ul'), {
+        draggable: 'li'
+        });
+    </script>
+
+npm run dev
